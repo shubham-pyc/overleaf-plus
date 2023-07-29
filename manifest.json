@@ -1,0 +1,37 @@
+{
+    "manifest_version": 2,
+    "name": "Text Logger Extension",
+    "version": "1.0",
+    "description": "Logs selected text when right-clicked.",
+    "permissions": [
+        "contextMenus",
+        "declarativeContent",
+        "activeTab",
+        "tabs",
+        "http://127.0.0.1:5000/*"
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "diff_match_patch.js",
+                "content.js",
+                "popup.js"
+            ],
+            "css":[
+                "style.css"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}

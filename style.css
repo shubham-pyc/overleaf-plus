@@ -1,0 +1,25 @@
+.overlay {
+            position: absolute;
+            background-color: white;
+            color: black ;
+            border: solid;
+            padding: 10px;
+            border-radius: 5px;
+            pointer-events: none; /* This prevents the overlay div from interfering with mouse events */
+            /* display: flex; */
+        }
+
+        .diff-container {
+      display: flex;
+    }
+    .diff-text {
+      flex: 1;
+      padding: 10px;
+      white-space: pre-wrap;
+    }
+    .diff-added {
+      background-color: #d2f9d2;
+    }
+    .diff-deleted1 {
+      background-color: #ffd1d1;
+    }
